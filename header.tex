@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Standard header for working papers
+%
+% WPHeader.tex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TEMPLATES
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Simple Tabular
+
+%\begin{tabular}{ |c|c|c| } 
+% \hline
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\ 
+% cell7 & cell8 & cell9 \\ 
+% \hline
+%\end{tabular}
+
+
+
+
+
+
+
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%
+%% Include general header where common packages are defined
+%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% general packages without options
+\usepackage{amsmath,amssymb,bbm}
+
+% graphics
+\usepackage{graphicx}
+
+\usepackage{pdfpages}
+
+% text formatting
+\usepackage[document]{ragged2e}
+\usepackage{pagecolor,color,setspace}
+
+
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[francais]{babel}
+
+
+
+% for framed figures or texts
+\usepackage{mdframed}
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% Idem general commands
+%%%%%%%%%%%%%%%%%%%%
+%% Commands
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+
+%% Math
+
+% Operators
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Proba}{\mathbb{P}}
+
+\newcommand{\Covb}[2]{\ensuremath{\Cov\!\left[#1,#2\right]}}
+\newcommand{\Eb}[1]{\ensuremath{\E\!\left[#1\right]}}
+\newcommand{\Pb}[1]{\ensuremath{\Proba\!\left[#1\right]}}
+\newcommand{\Varb}[1]{\ensuremath{\Var\!\left[#1\right]}}
+
+% norm
+\newcommand{\norm}[1]{\| #1 \|}
+
+
+%% graphics
+
+% renew graphics command for relative path providment only ?
+%\renewcommand{\includegraphics[]{}}
+
+
+
+% geometry
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{float}
+
+% layout : use fancyhdr package
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\makeatletter
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[RO,RE]{04/2017}
+\fancyhead[LO,LE]{Réseaux et Territoires}
+\fancyfoot[RO,RE] {\thepage}
+\fancyfoot[LO,LE] {L2 Analyse Spatiale - 2016-2017}
+\fancyfoot[CO,CE] {}
+
+
+\fancypagestyle{firststyle}
+{
+   \fancyhf{}
+   \fancyhead[RO,RE]{TD6 - 04/2017}
+   \fancyhead[LO,LE]{L2 Analyse Spatiale - 2016-2017}
+}
+
+
+\renewcommand{\abstractname}{Résumé}
+
+\renewcommand{\figurename}{\textbf{Document}}
+
+\newcommand{\question}[1]{$\rightarrow$ \textit{#1}}
+
+
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%% Begin doc
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+
